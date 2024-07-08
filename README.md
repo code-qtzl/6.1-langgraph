@@ -1,4 +1,4 @@
-# Week 7.1: LangGraph
+# Week 6.1: LangGraph
 
 ## Introduction
 LangGraph is a library for building stateful, multi-actor applications with LLMs, inspired by Pregel and Apache Beam. It allows coordination and checkpointing of multiple chains (or actors) using Python or JS, with a public interface inspired by NetworkX.
