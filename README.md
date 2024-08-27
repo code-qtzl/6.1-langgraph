@@ -5,8 +5,8 @@ LangGraph is a library for building stateful, multi-actor applications with LLMs
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
-- You have installed Python 3.6+.
-
+- You have installed Python 3.8.x - 3.11.x.
+  
 ## Setup Instructions
 
 ### Step 1: Clone the Repository
@@ -19,18 +19,18 @@ cd [repository-name]
 ### Step 2: Create a Python Virtual Environment
 Create a virtual environment using `venv`:
 ```bash
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
 ### Step 3: Activate the Virtual Environment
 Activate the virtual environment:
 - On Windows:
   ```bash
-  venv\Scripts\activate
+  .venv\Scripts\activate
   ```
 - On MacOS/Linux:
   ```bash
-  source venv/bin/activate
+  source .venv/bin/activate
   ```
 
 ### Step 4: Install Required Packages
