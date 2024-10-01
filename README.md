@@ -26,19 +26,18 @@ Before you begin, ensure you have met the following requirements:
    LANGCHAIN_PROJECT=24a6_6_1
    TAVILY_API_KEY=your-tavily-key
   ```
-## Docker (not recommended for most local hardware: recommended to use a cloud GPU)
+## Docker (recommended)
 1. Run the first example (`simple_message_graph.py`):
    ```
    docker compose run --rm main python simple_message_graph.py
    ```
-
-2. Run any `.py` file in the root directory in this manner (ones you may create):
-   ```
-   docker compose run --rm main python <the_py_file>
-   ```
-1. Start Jupyter to run the `.ipynb` files with a local notebook:
+2. Start Jupyter to run the `.ipynb` files with a local notebook:
    ```
    docker compose up jupyter
+   ```
+3. Run any `.py` file in the root directory in this manner (ones you may create):
+   ```
+   docker compose run --rm main python <the_py_files>
    ```
 
 ## Running Different Scripts
