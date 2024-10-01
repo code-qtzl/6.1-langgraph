@@ -1,7 +1,7 @@
 # Week 6.1: LangGraph
 
 ## Introduction
-LangGraph is a programming library designed to create complex applications using multiple language models (LLMs). It enables developers to build systems where various AI components interact and maintain state. 
+LangGraph is a library designed to create complex applications using large language models (LLMs). It enables developers to build systems where various AI components interact and maintain state.
 
 ## Slides
 
@@ -9,43 +9,44 @@ LangGraph is a programming library designed to create complex applications using
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
-- Docker
-- Python 3.11.0 or greater (local setup)
-
+- Docker Desktop (recommended for local setup)
+- Python 3.11.0 or greater (local setup with virtual environment)
 
 ### Set up environment variables:
 - Copy the sample environment file:
   ```bash
   cp .env.sample .env
   ```
-- Edit the `.env` file and add your Hugging Face token:
+- Edit the `.env` file:
   ```
-    OPENAI_API_KEY=your-openai-key
-    LANGCHAIN_API_KEY=your-langchain-key
-    LANGCHAIN_TRACING_V2=true
-    LANGCHAIN_PROJECT=langgraph
-    TAVILY_API_KEY=your-tavily-key
+   OPENAI_API_KEY=your-openai-key
+   LANGCHAIN_API_KEY=your-langchain-key
+   LANGCHAIN_TRACING_V2=true
+   LANGCHAIN_PROJECT=24a6_6_1
+   TAVILY_API_KEY=your-tavily-key
   ```
 ## Docker (not recommended for most local hardware: recommended to use a cloud GPU)
-1. Run the py file with Docker Compose:
+1. Run the first example (`in_class_examples/simple_message_graph.py`):
    ```
-   docker compose run --rm main
+   docker compose run --rm main python in_class_examples/simple_message_graph.py
    ```
-2. Start Jupyter to run the .ipynbfiles as local notebooks (best way to run the notebooks)
+
+2. Run any `.py` file in the root directory in this manner (ones you may create):
+   ```
+   docker compose run --rm main python <the_py_file>
+   ```
+1. Start Jupyter to run the `.ipynb` files with a local notebook:
    ```
    docker compose up jupyter
-   ```
-3. Run a specific script (any new `.py` file you may add):
-   ```
-   docker compose run --rm main python <script_name.py>
    ```
 
 ## Running Different Scripts
 You can use the provided `run.sh` script for easier execution.
 Make sure to make the script executable with `chmod +x run.sh` in the CLI before using:
 ```bash
-./run.sh jupyter
-./run.sh <your_new_py_file>
+./run.sh main #(runs the simple_message_graph.py file)
+./run.sh jupyter #(starts the jupyter notebook server)
+./run.sh <your_new_py_file> #(runs other .py file)
 ```
 ## Local Setup (Alternative to Docker)
 If you prefer to run the examples locally:
@@ -63,7 +64,7 @@ If you prefer to run the examples locally:
     pip install -r requirements.txt
     ```
 4. Configure environment variables as described in the Setup section.
-5. Export your `.env` variables to the system (python-dotenv should handle this for you in the main `.ipynb` file, but this is included for reference):
+5. Export your `.env` variables to the system (python-dotenv should handle this for you in the main `simple_message_graph.py` and `multi-agent-updated-24a5.ipynb` files, but this is included for reference):
    **Linux / Mac / Bash**
       ```bash
       export $(grep -v '^#' .env | xargs)
