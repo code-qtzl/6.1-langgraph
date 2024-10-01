@@ -11,6 +11,7 @@ LangGraph is a library designed to create complex applications using large langu
 Before you begin, ensure you have met the following requirements:
 - Docker Desktop (recommended for local setup)
 - Python 3.11.0 or greater (local setup with virtual environment)
+- You'll need a free Tavily API key if you don't have one: [Tavily](https://tavily.com/)
 
 ### Set up environment variables:
 - Copy the sample environment file:
@@ -26,9 +27,9 @@ Before you begin, ensure you have met the following requirements:
    TAVILY_API_KEY=your-tavily-key
   ```
 ## Docker (not recommended for most local hardware: recommended to use a cloud GPU)
-1. Run the first example (`in_class_examples/simple_message_graph.py`):
+1. Run the first example (`simple_message_graph.py`):
    ```
-   docker compose run --rm main python in_class_examples/simple_message_graph.py
+   docker compose run --rm main python simple_message_graph.py
    ```
 
 2. Run any `.py` file in the root directory in this manner (ones you may create):

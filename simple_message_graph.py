@@ -2,6 +2,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langgraph.graph import END, MessageGraph
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
@@ -10,7 +11,7 @@ os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGCHAIN_TRACING_V2")
 os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT")
 
-model = ChatOpenAI(temperature=0)
+model = ChatOpenAI(temperature=0, model="gpt-4o-mini")
 
 # First, we initialize our model and a MessageGraph.
 graph = MessageGraph()
