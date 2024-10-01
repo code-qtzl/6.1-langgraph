@@ -65,7 +65,7 @@ If you prefer to run the examples locally:
     pip install -r requirements.txt
     ```
 4. Configure environment variables as described in the Setup section.
-5. Export your `.env` variables to the system (python-dotenv should handle this for you in the main `simple_message_graph.py` and `multi-agent-updated-24a5.ipynb` files, but this is included for reference):
+5. Export your `.env` variables to the system (python-dotenv should handle this for you in the main `simple_message_graph.py` and `multi-agent-collaboration.ipynb` files, but this is included for reference):
    **Linux / Mac / Bash**
       ```bash
       export $(grep -v '^#' .env | xargs)
