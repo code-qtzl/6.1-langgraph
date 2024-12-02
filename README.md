@@ -23,7 +23,7 @@ Before you begin, ensure you have met the following requirements:
    OPENAI_API_KEY=your-openai-key
    LANGCHAIN_API_KEY=your-langchain-key
    LANGCHAIN_TRACING_V2=true
-   LANGCHAIN_PROJECT=24a6_6_1
+   LANGCHAIN_PROJECT=week_6_1
    TAVILY_API_KEY=your-tavily-key
   ```
 ## Docker (recommended)
@@ -71,7 +71,7 @@ If you prefer to run the examples locally:
       ```
 5. Run the notebook:
     ```
-    run the ipynb file in VSCode (it will prompt you to allow the installation of ipykernel: do so)
+    run the .ipynb file in VSCode (it will prompt you to allow the installation of ipykernel: do so) or in another IDE that supports Jupyter notebooks
     ```
 ## Need Help?
-Reach out to the course instructor or learning assistant
+Reach out to the learning assistants
