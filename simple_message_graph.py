@@ -36,4 +36,5 @@ runnable = graph.compile()
 # 3. The "oracle" node executes, invoking the chat model.
 # 4. The chat model returns an AIMessage. LangGraph adds this to the state.
 # 5. Execution progresses to the special END value and outputs the final state.
-print(runnable.invoke(HumanMessage("What is 1 + 1?")))
+response = (runnable.invoke(HumanMessage("What is 1 + 1?")))
+print(response[1].content)
